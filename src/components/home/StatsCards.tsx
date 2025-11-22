@@ -36,87 +36,87 @@ const StatsCards = ({ stats }: StatsCardsProps) => {
       initial="hidden"
       animate="show"
     >
-      <motion.div variants={item} transition={{ type: "spring", stiffness: 100 }}>
-        <Card className="overflow-hidden relative group border-l-4 border-l-green-500 shadow-lg hover:shadow-green-500/10 transition-all duration-300">
+      <motion.div variants={item} transition={{ type: "spring", stiffness: 100 }} className="animate-fade-in-up delay-100">
+        <Card className="glass-card overflow-hidden relative group border-l-4 border-l-green-500">
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
           <CardHeader className="pb-2 relative z-10">
-            <CardTitle className="text-lg flex items-center">
-              <div className="p-2 bg-green-500/20 rounded-lg mr-2">
-                <FileDigit className="h-5 w-5 text-green-500" />
+            <CardTitle className="text-lg flex items-center text-gray-100">
+              <div className="p-2 bg-green-500/20 rounded-lg mr-2 border border-green-500/30">
+                <FileDigit className="h-5 w-5 text-green-400" />
               </div>
               Packets Received
             </CardTitle>
           </CardHeader>
           <CardContent className="relative z-10">
-            <div className="text-3xl font-bold text-green-500">
+            <div className="text-3xl font-bold text-green-400 data-glow">
               {stats.packetsReceived.toLocaleString()}
             </div>
             <div className="flex justify-between items-center mt-2">
-              <div className="text-xs text-muted-foreground">Last updated: {new Date().toLocaleTimeString()}</div>
-              <div className="h-1 w-16 bg-gradient-to-r from-green-500 to-green-500/20 rounded-full"></div>
+              <div className="text-xs text-gray-400">Last updated: {new Date().toLocaleTimeString()}</div>
+              <div className="h-1 w-16 bg-gradient-to-r from-green-500 to-green-500/20 rounded-full animate-pulse"></div>
             </div>
           </CardContent>
         </Card>
       </motion.div>
       
-      <motion.div variants={item} transition={{ type: "spring", stiffness: 100 }}>
-        <Card className="overflow-hidden relative group border-l-4 border-l-blue-500 shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+      <motion.div variants={item} transition={{ type: "spring", stiffness: 100 }} className="animate-fade-in-up delay-200">
+        <Card className="glass-card overflow-hidden relative group border-l-4 border-l-blue-500">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
           <CardHeader className="pb-2 relative z-10">
-            <CardTitle className="text-lg flex items-center">
-              <div className="p-2 bg-blue-500/20 rounded-lg mr-2">
-                <LineChart className="h-5 w-5 text-blue-500" />
+            <CardTitle className="text-lg flex items-center text-gray-100">
+              <div className="p-2 bg-blue-500/20 rounded-lg mr-2 border border-blue-500/30">
+                <LineChart className="h-5 w-5 text-blue-400" />
               </div>
               Detected Protocols
             </CardTitle>
           </CardHeader>
           <CardContent className="relative z-10">
-            <div className="text-3xl font-bold text-blue-500">{stats.protocols}</div>
+            <div className="text-3xl font-bold text-blue-400 data-glow">{stats.protocols}</div>
             <div className="flex justify-between items-center mt-2">
-              <div className="text-xs text-muted-foreground">Including RTP, HTTP, SIP, FTP, SMTP</div>
-              <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-blue-500/20 rounded-full"></div>
+              <div className="text-xs text-gray-400">Including RTP, HTTP, SIP, FTP, SMTP</div>
+              <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-blue-500/20 rounded-full animate-pulse"></div>
             </div>
           </CardContent>
         </Card>
       </motion.div>
       
-      <motion.div variants={item} transition={{ type: "spring", stiffness: 100 }}>
-        <Card className="overflow-hidden relative group border-l-4 border-l-purple-500 shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
+      <motion.div variants={item} transition={{ type: "spring", stiffness: 100 }} className="animate-fade-in-up delay-300">
+        <Card className="glass-card overflow-hidden relative group border-l-4 border-l-purple-500">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
           <CardHeader className="pb-2 relative z-10">
-            <CardTitle className="text-lg flex items-center">
-              <div className="p-2 bg-purple-500/20 rounded-lg mr-2">
-                <ArrowDownToLine className="h-5 w-5 text-purple-500" />
+            <CardTitle className="text-lg flex items-center text-gray-100">
+              <div className="p-2 bg-purple-500/20 rounded-lg mr-2 border border-purple-500/30">
+                <ArrowDownToLine className="h-5 w-5 text-purple-400" />
               </div>
               Extracted Media
             </CardTitle>
           </CardHeader>
           <CardContent className="relative z-10">
-            <div className="text-3xl font-bold text-purple-500">{stats.extractedMedia}</div>
+            <div className="text-3xl font-bold text-purple-400 data-glow">{stats.extractedMedia}</div>
             <div className="flex justify-between items-center mt-2">
-              <div className="text-xs text-muted-foreground">Audio, video and VoIP calls</div>
-              <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-purple-500/20 rounded-full"></div>
+              <div className="text-xs text-gray-400">Audio, video and VoIP calls</div>
+              <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-purple-500/20 rounded-full animate-pulse"></div>
             </div>
           </CardContent>
         </Card>
       </motion.div>
       
-      <motion.div variants={item} transition={{ type: "spring", stiffness: 100 }}>
-        <Card className="overflow-hidden relative group border-l-4 border-l-red-500 shadow-lg hover:shadow-red-500/10 transition-all duration-300">
+      <motion.div variants={item} transition={{ type: "spring", stiffness: 100 }} className="animate-fade-in-up delay-300">
+        <Card className="glass-card overflow-hidden relative group border-l-4 border-l-red-500">
           <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
           <CardHeader className="pb-2 relative z-10">
-            <CardTitle className="text-lg flex items-center">
-              <div className="p-2 bg-red-500/20 rounded-lg mr-2">
-                <Shield className="h-5 w-5 text-red-500" />
+            <CardTitle className="text-lg flex items-center text-gray-100">
+              <div className="p-2 bg-red-500/20 rounded-lg mr-2 border border-red-500/30">
+                <Shield className="h-5 w-5 text-red-400" />
               </div>
               Security Events
             </CardTitle>
           </CardHeader>
           <CardContent className="relative z-10">
-            <div className="text-3xl font-bold text-red-500">{stats.securityEvents}</div>
+            <div className="text-3xl font-bold text-red-400 data-glow">{stats.securityEvents}</div>
             <div className="flex justify-between items-center mt-2">
-              <div className="text-xs text-muted-foreground">Alerts, warnings and notifications</div>
-              <div className="h-1 w-16 bg-gradient-to-r from-red-500 to-red-500/20 rounded-full"></div>
+              <div className="text-xs text-gray-400">Alerts, warnings and notifications</div>
+              <div className="h-1 w-16 bg-gradient-to-r from-red-500 to-red-500/20 rounded-full animate-pulse"></div>
             </div>
           </CardContent>
         </Card>

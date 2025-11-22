@@ -49,14 +49,14 @@ const HomePage: React.FC = () => {
       title: "Dashboard",
       icon: <BarChart2 className="h-5 w-5" />,
       color: "text-blue-500",
-      link: "/dashboard",
+      link: "/",
     },
     {
       id: "analytics",
       title: "Analytics",
       icon: <LineChart className="h-5 w-5" />,
       color: "text-green-500",
-      link: "/analytics",
+      link: "/protocol-stats",
     },
     {
       id: "source",
@@ -70,30 +70,30 @@ const HomePage: React.FC = () => {
       title: "Settings",
       icon: <Settings className="h-5 w-5" />,
       color: "text-gray-500",
-      link: "/settings",
+      link: "/about",
     },
   ];
 
   // Define features array
   const features: FeatureItem[] = [
     {
-      title: "Signal Visualizer",
+      title: "Packet Stream",
       description:
-        "Real-time signal strength and frequency spectrum monitoring",
+        "Real-time packet monitoring and analysis",
       icon: <LineChart className="h-6 w-6" />,
-      link: "/signal",
+      link: "/packet-stream",
       color: "bg-blue-500/10 text-blue-500",
-      tabValue: "signal",
-      component: <SignalVisualizer />,
+      tabValue: "packet-stream",
+      component: <PacketStream />,
     },
     {
       title: "Protocol Stats",
       description:
         "Comprehensive protocol distribution and performance metrics",
       icon: <BarChart2 className="h-6 w-6" />,
-      link: "/protocol",
+      link: "/protocol-stats",
       color: "bg-green-500/10 text-green-500",
-      tabValue: "protocol",
+      tabValue: "protocol-stats",
       component: <ProtocolStats />,
     },
     {
@@ -109,9 +109,9 @@ const HomePage: React.FC = () => {
       title: "Media Extractor",
       description: "Extract and analyze media streams from packets",
       icon: <VideoIcon className="h-6 w-6" />,
-      link: "/media",
+      link: "/extraction",
       color: "bg-purple-500/10 text-purple-500",
-      tabValue: "media",
+      tabValue: "extraction",
       component: <MediaExtractor />,
     },
     {
@@ -133,12 +133,12 @@ const HomePage: React.FC = () => {
       component: <SatelliteDashboard />,
     },
     {
-      title: "AI Processing",
-      description: "Intelligent packet loss recovery and analysis",
+      title: "Media Player",
+      description: "Play and analyze extracted media content",
       icon: <Sparkles className="h-6 w-6" />,
-      link: "/recovery",
+      link: "/media",
       color: "bg-indigo-500/10 text-indigo-500",
-      tabValue: "recovery",
+      tabValue: "media",
       component: <LossRecovery />,
     },
   ];
